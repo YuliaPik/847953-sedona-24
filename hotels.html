@@ -24,8 +24,30 @@
 
     <main class="container">
 
-      <!-- Здесь будет форма -->
+      <form class="hotels-form" action="index.html" method="post">
+        <fieldset class="infrastructure">
+          <legend>Инфраструктура:</legend>
+          <input id="pool" type="checkbox" name="pool" value="pool" checked>
+          <label for="pool">Бассейн</label>
+          <input id="parking" type="checkbox" name="parking" value="parking">
+          <label for="parking">Парковка<label>
+          <input id="wi-fi" type="checkbox" name="wi-fi" value="wi-fi" >
+          <label for="wi-fi">Wi-fi<label>
+        </fieldset>
 
+        <fieldset class="type-of-housing">
+          <legend>Тип жилья:</legend>
+          <input id="hotel" type="checkbox" name="hotel" value="hotel" checked>
+          <label for="hotel">Гостиница</label>
+          <input id="motel" type="checkbox" name="motel" value="motel" checked>
+          <label for="motel">Мотель<label>
+          <input id="apartment" type="checkbox" name="apartment" value="apartment" checked>
+          <label for="apartment">Апартаменты<label>
+        </fieldset>
+
+        <button class="button" type="button">Показать</button>
+        
+      </form>
 
       <section class="hotels">
         <ul class="hotels-list">

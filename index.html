@@ -88,11 +88,36 @@
         </ul>
       </section>
 
-      <section class="appointment">
+      <section class="search-hotels">
         <h2>Заинтересовались!</h2>
-        <p class="appointment-info">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения
+        <p class="search-hotels-info">Укажите предполагаемые даты поездки, и мы покажем Вам лучшие предложения
         гостиниц в Седоне</p>
-          <!-- Здесь будет форма -->
+
+        <form class="search-hotels-form" action="index.html" method="post">
+          <h2> Поиск гостиницы в Седоне </h2>
+          <p class="search-hotels-item">
+            <label for="search-hotels-date-in">Дата заезда:</label>
+            <input id="search-hotels-date-in" type="text" name="date-in" placeholder="27 апреля 2017">
+          </p>
+          <p class="search-hotels-item">
+            <label for="search-hotels-date-out">Дата выезда:</label>
+            <input id="search-hotels-date-out" type="text" name="date-out" placeholder="04 июля 2017">
+          </p>
+          <p class="search-hotels-item">
+            <label for="search-hotels-adults">Взрослые</label>
+            <button class="button-change-number" type="button">-</button>
+            <input id="search-hotels-adults" type="text" name="adults" placeholder="2">
+            <button class="button-change-number" type="button">+</button>
+          </p>
+          <p class="search-hotels-item">
+            <label for="search-hotels-children">Дети</label>
+            <button class="button-change-number" type="button">-</button>
+            <input id="search-hotels-children" type="text" name="children" placeholder="0">
+            <button class="button-change-number" type="button">+</button>
+          </p>
+          <button class="button" type="button">Найти</button>
+        </form>
+
       </section>
 
       <section class="map">
