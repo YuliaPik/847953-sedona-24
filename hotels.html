@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
+
   <body>
     <header class="main-header">
 
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
+          <li><a href="index.html" >Информация</a></li>
           <li><a href="photo.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
-          <li><a href="hotels.html">Гостиницы</a></li>
+          <li><a href="hotels.html" class="active-page">Гостиницы</a></li>
         </ul>
       </nav>
 
@@ -30,9 +35,9 @@
           <input id="pool" type="checkbox" name="pool" value="pool" checked>
           <label for="pool">Бассейн</label>
           <input id="parking" type="checkbox" name="parking" value="parking">
-          <label for="parking">Парковка<label>
+          <label for="parking">Парковка</label>
           <input id="wi-fi" type="checkbox" name="wi-fi" value="wi-fi" >
-          <label for="wi-fi">Wi-fi<label>
+          <label for="wi-fi">Wi-fi</label>
         </fieldset>
 
         <fieldset class="type-of-housing">
@@ -40,45 +45,45 @@
           <input id="hotel" type="checkbox" name="hotel" value="hotel" checked>
           <label for="hotel">Гостиница</label>
           <input id="motel" type="checkbox" name="motel" value="motel" checked>
-          <label for="motel">Мотель<label>
+          <label for="motel">Мотель</label>
           <input id="apartment" type="checkbox" name="apartment" value="apartment" checked>
-          <label for="apartment">Апартаменты<label>
+          <label for="apartment">Апартаменты</label>
         </fieldset>
 
-        <button class="button" type="button">Показать</button>
-        
+        <button class="button-show" type="button">Показать</button>
+
       </form>
 
       <section class="hotels">
         <ul class="hotels-list">
           <li class="hotel-item">
             <img src="img/Amara_Resort.jpg" width="135" height="90" alt="Amara Resort & SPA">
-            <h2><a href="#">Amara Resort & SPA</a></h2>
+            <h2><a class="hotel-name" href="#">Amara Resort & SPA</a></h2>
             <p class="hotels-type">Гостиница</p>
-            <p class="hotels-price">от 4000р.</p>
+            <p class="hotels-price">от 4000 р.</p>
             <a class="button button-detailed" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
-            <p class="rating">Рейтинг:8.5</p>
+            <p class="hotel-rating">Рейтинг: 8,5</p>
           </li>
 
           <li class="hotel-item">
             <img src="img/Desert_Quail_Inn.jpg" width="135" height="90" alt="Desert Quail Inn">
-            <h2><a href="#">Desert Quail Inn</a></h2>
+            <h2><a class="hotel-name" href="#">Desert Quail Inn</a></h2>
             <p class="hotels-type">Мотель</p>
-            <p class="hotels-price">от 3000р.</p>
+            <p class="hotels-price">от 3000 р.</p>
             <a class="button button-detailed" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
-            <p class="rating">Рейтинг:8.9</p>
+            <p class="hotel-rating">Рейтинг: 8,9</p>
           </li>
 
           <li class="hotel-item">
             <img src="img/Poco_Diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
-            <h2><a href="#">Villas at Poco Diablo</a></h2>
+            <h2><a class="hotel-name" href="#">Villas at Poco Diablo</a></h2>
             <p class="hotels-type">Аппартаменты</p>
-            <p class="hotels-price">от 2000р.</p>
+            <p class="hotels-price">от 2000 р.</p>
             <a class="button button-detailed" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
-            <p class="rating">Рейтинг:9.2</p>
+            <p class="hotel-rating">Рейтинг: 9,2</p>
           </li>
 
         </ul>
@@ -103,7 +108,7 @@
       <div class="footer-copyright">
         <p>Website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy.png" width="115" height="41"  alt="Логотип HTML Academy">
+          <img class="logo-htmlacademy" src="img/logo-htmlacademy.svg" width="115" height="41"  alt="Логотип HTML Academy">
         </a>
       </div>
 

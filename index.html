@@ -1,15 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&amp;subset=cyrillic" rel="stylesheet">
   </head>
+
   <body>
     <header class="main-header">
 
       <nav class="main-navigation">
         <ul class="site-navigation">
-          <li><a href="info.html">Информация</a></li>
+          <li><a href="index.html" class="active-page">Информация</a></li>
           <li><a href="photo.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="hotels.html">Гостиницы</a></li>
@@ -24,12 +29,8 @@
 
     <main class="container">
 
-      <section class="welcome">
-        <p>Welcome</p>
-        <p>- to the gorgeous -</p>
-        <h1>Sedona</h1>
-        <p>"Because the Grand Conyon sucks!"</p>
-      </section>
+      <div class="welcome">
+      </div>
 
       <p class="slogan">Седона - небольшой городок в Аризоне, заслуживающий большего!</p>
 
@@ -37,27 +38,12 @@
         <h2>Рассмотрим 5 причин, по которым Седона круче, чем Гранд Каньон!</h2>
 
         <ul class="reasons-list">
+
           <li class="reason-item">
             <h3>Настоящий городок</h3>
             <p>- №1 -</p>
             <p>Седона - не аттракцион для туристов, там течет своя жизнь </p>
             <img src="img/reason1.jpg" width="800" height="256" alt="reason1">
-
-            <ul class="recommendations-list">
-              <li class="recommendation-item">
-                <h3>Жильё</h3>
-                <p>Рекомендуем пожить в настоящем мотеле. Все как в кино!</p>
-              </li>
-              <li class="recommendation-item">
-                <h3>Еда</h3>
-                <p>Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
-              </li>
-              <li class="recommendation-item">
-                <h3>Сувениры</h3>
-                <p>Не только китайского, но и местного производства!</p>
-              </li>
-            </ul>
-
           </li>
 
           <li class="reason-item">
@@ -85,6 +71,23 @@
             <p>Большинство едет в Гранд Каньон и толпится там </p>
           </li>
 
+          <li class="reason-item">
+            <ul class="recommendations-list">
+              <li class="recommendation-item">
+                <h3>Жильё</h3>
+                <p>Рекомендуем пожить в настоящем мотеле. Все как в кино!</p>
+              </li>
+              <li class="recommendation-item">
+                <h3>Еда</h3>
+                <p>Всегда заказывайте фирменный бургер. Вы не разочаруетесь!</p>
+              </li>
+              <li class="recommendation-item">
+                <h3>Сувениры</h3>
+                <p>Не только китайского, но и местного производства!</p>
+              </li>
+            </ul>
+          </li>
+
         </ul>
       </section>
 
@@ -94,34 +97,36 @@
         гостиниц в Седоне</p>
 
         <form class="search-hotels-form" action="index.html" method="post">
-          <h2> Поиск гостиницы в Седоне </h2>
+          <button  class="button button-open-form">Поиск гостиницы в Седоне</button>
           <p class="search-hotels-item">
             <label for="search-hotels-date-in">Дата заезда:</label>
-            <input id="search-hotels-date-in" type="text" name="date-in" placeholder="27 апреля 2017">
+            <input id="search-hotels-date-in" type="text" name="date-in" value="27 апреля 2017">
+            <button class="button-calendar" type="button"></button>
           </p>
           <p class="search-hotels-item">
             <label for="search-hotels-date-out">Дата выезда:</label>
-            <input id="search-hotels-date-out" type="text" name="date-out" placeholder="04 июля 2017">
+            <input id="search-hotels-date-out" type="text" name="date-out" value="04 июля 2017">
+            <button class="button-calendar" type="button"></button>
           </p>
           <p class="search-hotels-item">
             <label for="search-hotels-adults">Взрослые</label>
             <button class="button-change-number" type="button">-</button>
-            <input id="search-hotels-adults" type="text" name="adults" placeholder="2">
+            <input id="search-hotels-adults" type="text" name="adults" value="2">
             <button class="button-change-number" type="button">+</button>
           </p>
           <p class="search-hotels-item">
             <label for="search-hotels-children">Дети</label>
             <button class="button-change-number" type="button">-</button>
-            <input id="search-hotels-children" type="text" name="children" placeholder="0">
+            <input id="search-hotels-children" type="text" name="children" value="0">
             <button class="button-change-number" type="button">+</button>
           </p>
-          <button class="button" type="button">Найти</button>
+          <button class="button button-search" type="submit">Найти</button>
         </form>
 
       </section>
 
-      <section class="map">
-      </section>
+      <div class="map">
+      </div>
 
     </main>
 
@@ -140,7 +145,7 @@
       <div class="footer-copyright">
         <p>Website by</p>
         <a href="https://htmlacademy.ru/intensive/htmlcss">
-          <img src="img/logo-htmlacademy.png" width="115" height="41"  alt="Логотип HTML Academy">
+          <img class="logo-htmlacademy" src="img/logo-htmlacademy.svg" width="115" height="41"  alt="Логотип HTML Academy">
         </a>
       </div>
 
