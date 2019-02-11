@@ -14,6 +14,14 @@ a {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .main-navigation{
   font-size: 14px;
   line-height: 26px;
@@ -41,17 +49,20 @@ li .active-page{
   font:inherit;
   color: #766357;
 }
+.container{
+  width: 1200px;
+  margin: 0 auto;
+}
 
 .welcome{
   width: 1200px;
-  height: 800px;
-  margin: 0 auto;
+  height: 510px;
 
   background-image: url("../img/welcome.svg"),
                     url("../img/polygon.svg"),
                     url("../img/background-photo.jpg");
-  background-position: top 132px left 370px,bottom 0px center, 50% 50% ;
-  background-size: 459px 353px,1200px 57px, 1200px 800px ;
+  background-position: top 76px left 370px,bottom 0px center, 50% 50% ;
+  background-size: 459px 353px,1200px 57px, 1200px 510px ;
   background-repeat: no-repeat;
 }
 
@@ -71,26 +82,29 @@ li .active-page{
 .reasons-list,
 .recommendations-list{
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.reason-item{
+.reason-item h3,
+.recommendation-item h3{
+  font-size: 21px;
+  line-height: 21px;
   text-align: center;
 }
 
-.reason-item h3{
-  font-size: 21px;
-}
-
-.reason-item p{
+.reason-item p,
+.recommendation-item p{
   font-weight: normal;
+  text-align: center;
 }
 
 .recommendation-item p{
   color: #333333;
-  font-weight: normal;
 }
 
-.reason-item:first-child, .reason-item:nth-child(2){
+.reasons-list > li:first-child,
+.reasons-list > li:nth-child(2){
   background-color: #81b3d2;
   color: #ffffff;
 }
@@ -161,6 +175,11 @@ li .active-page{
 
 .button-change-number:active{
   color: #81b3d2;
+}
+
+.search-hotels-form{
+  border: 1px solid gray;
+  width: 568px;
 }
 
 .search-hotels h2{
@@ -243,4 +262,48 @@ li .active-page{
 .hotel-rating{
   font-weight: normal;
   color: #666666;
+}
+
+.search-hotels-item{
+  /* position: relative; */
+  /* display: inline-block; */
+}
+
+.calendar{
+  /* position: absolute;
+  top: 0;
+  right: 0; */
+
+  width: 21px;
+  height: 22px;
+
+  opacity: 0.4;
+	cursor: pointer;
+}
+
+.calendar:focus,
+.calendar:hover{
+  opacity: 1;
+}
+
+.calendar:active path{
+  fill: #81b3d2;
+}
+
+.rating-star-list{
+  list-style: none;
+}
+
+.html-academy svg{
+  width:115px;
+  height: 41px;
+}
+
+.html-academy:hover path,
+.html-academy:focus path{
+  fill: #81b3d2;
+}
+
+.html-academy:active path{
+  fill: #bdbbbc;
 }
