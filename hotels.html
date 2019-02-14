@@ -10,20 +10,22 @@
   </head>
 
   <body>
+
     <header class="main-header">
 
       <nav class="main-navigation">
+
         <ul class="site-navigation">
-          <li><a href="index.html" >Информация</a></li>
+          <li><a href="index.html">Информация</a></li>
           <li><a href="photo.html">Фото и видео</a></li>
           <li><a href="map.html">Карта штата</a></li>
           <li><a href="hotels.html" class="active-page">Гостиницы</a></li>
+          <li><a class="main-header-logo">
+            <img src="img/logo.svg" width="138" height="70" alt="Логотип Седона">
+          </a></li>
         </ul>
-      </nav>
 
-      <a class="main-header-logo" href="index.html">
-          <img src="img/logo.svg" width="140" height="72" alt="Логотип Седона">
-      </a>
+      </nav>
 
     </header>
 
@@ -50,17 +52,46 @@
           <label for="apartment">Апартаменты</label>
         </fieldset>
 
+        <fieldset>
+          <label for="">Стоимость в сутки (Р):</label>
+        </fieldset>
         <button class="button-show" type="submit">Показать</button>
 
       </form>
 
+      <div class="search-results">
+        <p class="found">Найдено: 3</p>
+        <p class="sort">Сортировка:</p>
+        <ul class="sort-types">
+          <li> <a href="#" class="active-sort">По цене</a> </li>
+          <li> <a href="#">По типу</a> </li>
+          <li> <a href="#">По рейтингу</a> </li>
+        </ul>
+        <div class="sort-down-up">
+          <span class="down-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#cacaca" d="M5.5 0L0 10h11z"/>
+            </svg>
+          </span>
+          <span class="down-up active-sort-down-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
+                <path fill="#cacaca" d="M5.5 10L0 0h11"/>
+            </svg>
+          </span>
+        </div>
+      </div>
+
       <section class="hotels">
         <ul class="hotels-list">
           <li class="hotel-item">
-            <img src="img/Amara_Resort.jpg" width="135" height="90" alt="Amara Resort & SPA">
+            <img class="hotel-photo" src="img/Amara_Resort.jpg" width="135" height="90" alt="Amara Resort & SPA">
             <h2><a class="hotel-name" href="#">Amara Resort & SPA</a></h2>
-            <p class="hotels-type">Гостиница</p>
-            <p class="hotels-price">от 4000 р.</p>
+            <table class="hotels-table">
+              <tr>
+                <td>Гостиница</td>
+                <td>от 4000 р.</td>
+              </tr>
+            </table>
             <a class="button button-detailed" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
             <ul class="rating-star-list">
@@ -73,10 +104,14 @@
           </li>
 
           <li class="hotel-item">
-            <img src="img/Desert_Quail_Inn.jpg" width="135" height="90" alt="Desert Quail Inn">
+            <img class="hotel-photo" src="img/Desert_Quail_Inn.jpg" width="135" height="90" alt="Desert Quail Inn">
             <h2><a class="hotel-name" href="#">Desert Quail Inn</a></h2>
-            <p class="hotels-type">Мотель</p>
-            <p class="hotels-price">от 3000 р.</p>
+            <table class="hotels-table">
+              <tr>
+                <td>Мотель</td>
+                <td>от 3000 р.</td>
+              </tr>
+            </table>
             <a class="button button-detailed" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
             <ul class="rating-star-list">
@@ -88,10 +123,14 @@
           </li>
 
           <li class="hotel-item">
-            <img src="img/Poco_Diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
+            <img class="hotel-photo" src="img/Poco_Diablo.jpg" width="135" height="90" alt="Villas at Poco Diablo">
             <h2><a class="hotel-name" href="#">Villas at Poco Diablo</a></h2>
-            <p class="hotels-type">Аппартаменты</p>
-            <p class="hotels-price">от 2000 р.</p>
+            <table class="hotels-table">
+              <tr>
+                  <td>Аппартаменты</td>
+                  <td>от 2000 р.</td>
+              </tr>
+            </table>
             <a class="button button-detailed" href="#">Подробнее</a>
             <a class="button button-book" href="#">Забронировать</a>
             <ul class="rating-star-list">
@@ -109,7 +148,7 @@
 
 
     <footer class="main-footer">
-    </footer>
+
       <p class="hashtag">#VisitSedona</p>
 
       <div class="footer-social">
@@ -129,6 +168,8 @@
           </svg>
         </a>
       </div>
+
+    </footer>
 
   </body>
 </html>
