@@ -19,7 +19,7 @@ body {
   margin: 0;
   padding: 0;
 
-  color: #00000;
+  color: #000000;
   background-color: #ffffff;
 
   font-family: "PT Sans", Arial, sans-serif;
@@ -41,19 +41,23 @@ a {
   margin: -1px;
 }
 
+.wrapper {
+  width: 1200px;
+  margin: 0 auto;
+}
+
 /* Шапка */
 
 .main-header {
   margin: 0 auto;
 
-  width: 1200px;
   min-height: 56px;
 
   background-color: white;
 }
 
 .main-navigation {
-  color: #00000;
+  color: #000000;
   background-color: #ffffff;
 
   font-size: 14px;
@@ -62,6 +66,7 @@ a {
 
 .site-navigation {
   display: flex;
+  justify-content: space-between;
 
   margin: 0;
   padding:0;
@@ -71,17 +76,18 @@ a {
 
 .site-navigation li {
   width: 239px;
-  height: 56px;
+  height: 41px;
+  margin-top: 15px;
 
   text-align: center;
   vertical-align: middle;
 }
 
 .site-navigation li:last-child {
-  align-self: center;
-
   width: 244px;
   height: 56px;
+
+  margin-top: 0;
 }
 
 .site-navigation li:first-child,
@@ -116,13 +122,11 @@ li .active-page {
 /*Main*/
 
 .container {
-  width: 1200px;
   margin: 0 auto;
   padding: 0;
 }
 
 .welcome {
-  width: 1200px;
   height: 510px;
 
   background-image: url("../img/welcome.svg"),
@@ -135,8 +139,8 @@ li .active-page {
 
 .slogan {
   width: 440px;
-  margin-top: 58px;
-  padding: 0 380px;
+  margin: 58px auto 0;
+  padding: 0;
 
   font-size: 21px;
   line-height: 26px;
@@ -145,10 +149,7 @@ li .active-page {
 
 /* Причины */
 .reasons h2 {
-  width: 490px;
-  margin-top: 28px;
-  margin-bottom: 50px;
-  padding: 0 355px;
+  margin: 28px auto 50px;
 
   color: #333333;
   font-size: 14px;
@@ -175,7 +176,11 @@ li .active-page {
 }
 
 .reason-item h3,
-.recommendation-item h3 {
+.reason-item-description h3 {
+  width: 155px;
+  margin: 0 auto;
+  margin-top: 45px;
+
   font-size: 21px;
   line-height: 21px;
   text-align: center;
@@ -183,6 +188,8 @@ li .active-page {
 
 .reason-item p,
 .recommendation-item p {
+  margin-top: 10px;
+
   font-weight: normal;
   text-align: center;
 }
@@ -195,8 +202,7 @@ li .active-page {
 .reasons-list > li:nth-child(2) {
   display: flex;
   flex-direction: row;
-
-  width: 1200px;
+  justify-content: space-between;
 
   color: #ffffff;
   background-color: #81b3d2;
@@ -209,11 +215,10 @@ li .active-page {
   order: -1;
 }
 
-.reason-item-description {
-  width: 270px;
 
-  margin: 0 auto;
-  margin-top:25px;
+.reason-item-description:first-child,
+.reason-item-description:nth-child(2) {
+  flex-grow: 1;
 }
 
 .reasons-list > li:nth-child(3),
@@ -221,6 +226,7 @@ li .active-page {
 .reasons-list > li:nth-child(5) {
   width: 400px;
   min-height: 256px;
+  background-color:#eeeeee;
 }
 
 .recommendations-list {
@@ -229,6 +235,16 @@ li .active-page {
   justify-content: space-around;
 
   min-height: 330px;
+}
+
+.recommendation-item {
+  width: 400px;
+}
+
+.recommendation-item p {
+  width: 285px;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 /* Форма */
@@ -316,7 +332,7 @@ li .active-page {
 
 /* Карта */
 .map {
-  width:1200px;
+  width: 1200px;
   height: 473px;
 }
 
@@ -350,14 +366,21 @@ li .active-page {
 }
 
 .button-detailed {
+  display: inline-block;
   width: 110px;
-  height: 27px;
-
-  margin-left: 237px;
+  height: 21px;
+  padding: 3px 0;
+  margin: auto;
+  margin-right: 3px;
 }
 
 .button-book {
-  margin-left: 20px;
+  display: inline-block;
+
+  width: 142px;
+  height: 21px;
+  padding: 3px 0;
+
   background-color: #766357;
 }
 
@@ -400,7 +423,8 @@ li .active-page {
 }
 
 .button-open-form {
-  margin: 32px 316px 0;
+  display: block;
+  margin: 45px auto 0;
 
   width: 568px;
   height: 86px;
@@ -489,7 +513,6 @@ li .active-page {
 
 /* Форма поиска */
 .hotels-form {
-  width: 1200px;
   min-height: 217px;
 }
 
@@ -498,12 +521,8 @@ li .active-page {
   display: flex;
   align-items: baseline;
 
-  width: 1200px;
-
-  padding-top: 30px;
-  padding-bottom: 30px;
-
-  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .search-results .found {
@@ -563,7 +582,7 @@ li .active-page {
    margin-left: 505px;
  }
  .down-up {
-   padding-right: 10px;
+   margin-right: 10px;
  }
 
  .down-up:hover path,
@@ -585,33 +604,41 @@ li .active-page {
   margin: 0;
   padding: 0;
 
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+
   list-style: none;
 }
 
 .hotel-item {
-  position: relative;
-
-  width: auto;
-  min-height: 150px;
-
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-basis: 150px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.3);
 }
 
-.hotel-item .hotel-photo {
-  position: absolute;
-  top: 30px;
-  left: 72px;
+.hotel-item-image {
+  margin: 30px;
+  margin-left: 72px;
+}
+
+.hotel-item-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.hotel-item-info-name h2 {
+  margin: 0;
+  margin-top: 25px;
 }
 
 .hotel-name {
   color: #000000;
 
-  margin: 0;
-  padding: 0;
-  padding-left: 240px;
-  padding-top: 150px;
   font: inherit;
-  font-style: 21px;
+  font-size: 21px;
   line-height: 26px;
 }
 
@@ -624,24 +651,59 @@ li .active-page {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.hotels-table {
+.hotel-type-price {
+  margin-bottom: 5px;
+}
+
+.hotel-type,
+.hotel-price {
+  display: inline-block;
   margin: 0;
   padding: 0;
-  padding-left: 240px;
-
-  color: #333333;
 
   font-weight: normal;
 }
 
-.hotel-rating {
-  position: absolute;
-  right: 72px;
-  top: 80px;
-
+.hotel-type {
   width: 110px;
+  margin-right: 3px;
+}
 
-  padding: 5px auto;
+.hotel-buttons {
+  margin-bottom: 30px;
+}
+
+.hotel-item-raiting {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-end;
+
+  margin-right: 72px;
+}
+
+.rating-star-list {
+
+  display: flex;
+  flex-direction: row-reverse;
+
+  width: 100px;
+  margin: 0;
+  margin-top: 10px;
+  padding: 0;
+
+  list-style: none;
+}
+
+.rating-star-list li {
+  padding-left: 6px;
+}
+
+.hotel-rating {
+  width: 110px;
+  margin: 0;
+  margin-bottom: 10px;
+  padding: 0;
 
   color: #666666;
   background-color: #f2f2f2;
@@ -652,23 +714,4 @@ li .active-page {
   line-height: 27px;
 
   background-color: #e2e2f2;
-}
-
-.rating-star-list {
-  position: absolute;
-  top: 29px;
-  right: 72px;
-
-  display: flex;
-  flex-direction: row-reverse;
-
-  width: 100px;
-  margin: 0;
-  padding: 0;
-
-  list-style: none;
-}
-
-.rating-star-list li {
-  padding-left: 6px;
 }
